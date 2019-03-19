@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "File";
+}
+
+<h2>File Upload</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        <form method="post" enctype="multipart/form-data" action="/file/UploadSingleFile">
+            <p>Upload one file using this form:</p>
+            @*<div class="form-group">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <input type="text" name="name" />
+                        </div>
+                    </div>
+                </div>*@
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-10">
+                        <input type="file" name="file" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-10">
+                        <input type="submit" value="Upload" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row" style="margin-top: 20px">
+    <div class="col-md-12">
+        <form method="post" enctype="multipart/form-data" action="/file/UploadMultipleFiles">
+            <p>Upload one or more files using this form:</p>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-10">
+                        <input type="file" name="files" multiple />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-10">
+                        <input type="submit" value="Upload" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row" style="margin-top: 20px">
+    <div class="col-md-12">
+        <form method="post" enctype="multipart/form-data" action="/file/UploadFileWithModel">
+            <p>Upload file with additional data using this form:</p>
+            <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <label>Folder Name</label>
+                            <input type="text" name="folderName"/>
+                        </div>
+                    </div>
+                </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-10">
+                        <input type="file" name="file" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-10">
+                        <input type="submit" value="Upload" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
